@@ -1,0 +1,12 @@
+<div class="container">
+  <h1>Showing results for "{{ searchText }}"</h1>
+
+  <div
+    class="card"
+    *ngFor="let recipe of results"
+    (click)="showDetails(recipe.id)"
+  >
+    <img [src]="recipe.image" [alt]="recipe.title" class="card-img-top" />
+    <div class="title">{{ recipe.title }}</div>
+  </div>
+</div>
